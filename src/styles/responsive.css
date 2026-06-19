@@ -1,0 +1,74 @@
+@media (width <= 1024px) {
+  .lab-grid,
+  .lesson-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-heading {
+    min-height: auto;
+  }
+
+  .hero-copy {
+    transform: none;
+  }
+}
+
+@media (width <= 760px) {
+  .topbar {
+    position: static;
+    align-items: flex-start;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .brand {
+    max-width: 168px;
+  }
+
+  .topnav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .topnav a {
+    padding-inline: var(--space-2);
+  }
+
+  .hero {
+    min-height: 640px;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(180deg, var(--color-surface-strong), transparent 54%),
+      linear-gradient(0deg, var(--color-page), transparent 44%);
+  }
+
+  .hero-media {
+    object-position: 58% center;
+  }
+
+  .hero-copy {
+    width: calc(100% - var(--space-4));
+    margin-bottom: var(--space-5);
+  }
+
+  .workspace,
+  .lesson-map,
+  .quiz {
+    width: calc(100% - var(--space-4));
+    padding: var(--space-5) var(--space-0);
+  }
+
+  .fragment-cloud,
+  .bundle-slots {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-board {
+    min-height: 432px;
+  }
+
+  .quiz-options {
+    flex-direction: column;
+  }
+}

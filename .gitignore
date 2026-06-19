@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.claude/
+.mcp.json
+AGENTS.md
+CLAUDE.md
+.env
+.env.*
+step_archive/
+scripts/generate-step-artifacts.mjs
+*.log
+Thumbs.db
+.DS_Store

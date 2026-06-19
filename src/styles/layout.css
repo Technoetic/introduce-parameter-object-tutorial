@@ -1,0 +1,197 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  position: sticky;
+  top: var(--space-0);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: var(--space-2) var(--space-4);
+  background: color-mix(in srgb, var(--color-surface-strong) 88%, transparent);
+  border-bottom: 1px solid var(--color-line);
+  backdrop-filter: blur(16px);
+}
+
+.brand,
+.topnav,
+.hero-actions,
+.app-picker,
+.lesson-steps,
+.quiz-options {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: var(--space-2);
+  min-height: var(--size-touch);
+  font-weight: 800;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-teal-strong);
+  border-radius: var(--radius-2);
+  background:
+    linear-gradient(90deg, var(--color-teal) 50%, transparent 50%),
+    var(--color-amber-soft);
+}
+
+.topnav {
+  gap: var(--space-1);
+}
+
+.topnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--size-touch);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-2);
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.topnav a:hover {
+  color: var(--color-ink);
+  background: var(--color-teal-soft);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: 680px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-line);
+  isolation: isolate;
+}
+
+.hero::after {
+  position: absolute;
+  inset: var(--space-0);
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(90deg, var(--color-surface-strong), transparent 48%),
+    linear-gradient(0deg, var(--color-page), transparent 34%);
+}
+
+.hero-media {
+  position: absolute;
+  inset: var(--space-0);
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-copy {
+  width: min(640px, calc(100% - var(--space-5)));
+  margin: var(--space-8) auto var(--space-7);
+  transform: translateX(calc((min(100vw, var(--content-max)) - 100vw) / 2));
+}
+
+.hero-copy h1 {
+  max-width: 12ch;
+  margin: var(--space-2) var(--space-0) var(--space-3);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.hero-copy p:not(.eyebrow) {
+  max-width: 560px;
+  margin: var(--space-0) var(--space-0) var(--space-4);
+  color: var(--color-muted);
+  font-size: 1.125rem;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.workspace,
+.lesson-map,
+.quiz {
+  width: min(var(--content-max), calc(100% - var(--space-5)));
+  margin: var(--space-0) auto;
+  padding: var(--space-7) var(--space-0);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: var(--space-4);
+}
+
+.section-heading h2 {
+  margin: var(--space-1) var(--space-0) var(--space-2);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.section-heading p:not(.eyebrow) {
+  margin: var(--space-0);
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.app-picker {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.16fr) minmax(280px, 0.92fr);
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.panel {
+  min-width: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-2);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-line);
+}
+
+.panel-heading {
+  min-height: 104px;
+}
+
+.panel-heading h3 {
+  margin: var(--space-1) var(--space-0) var(--space-3);
+  font-size: 1.35rem;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.lesson-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+  gap: var(--space-3);
+}
+
+.lesson-steps {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.quiz {
+  padding-bottom: var(--space-8);
+}
+
+.quiz-options {
+  align-items: stretch;
+  gap: var(--space-3);
+}

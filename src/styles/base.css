@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: var(--space-0);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  background:
+    linear-gradient(180deg, var(--color-surface-strong), var(--color-page) 42%),
+    var(--color-page);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--color-surface-strong);
+  background: var(--color-teal-strong);
+}
