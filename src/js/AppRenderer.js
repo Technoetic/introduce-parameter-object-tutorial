@@ -99,7 +99,7 @@ export class AppRenderer {
       <section class="hero" id="top" aria-labelledby="hero-title">
         <img
           class="hero-media"
-          src="/assets/parameter-flow-hero.png"
+          src="./assets/parameter-flow-hero.png"
           alt="흩어진 앱 조건 조각들이 하나의 묶음으로 정리되어 여러 앱 흐름으로 이동하는 추상 이미지"
         />
         <div class="hero-copy">
